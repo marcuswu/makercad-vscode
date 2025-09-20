@@ -1,0 +1,18 @@
+{
+    "Export STL": {
+        "prefix": ["export", "stl"],
+        "body": [
+            "exports := makercad.ListOfShape{$0}",
+            "cad.ExportStl(\"$1\", exports, makercad.QualityHigh)"
+        ],
+        "description": "MakerCAD: Export an STL"
+    },
+    "Export STEP": {
+        "prefix": ["export", "step"],
+        "body": [
+            "exports := makercad.ListOfShape{$0}",
+            "cad.ExportStep(\"$1\", exports)"
+        ],
+        "description": "MakerCAD: Export an STL"
+    }
+}

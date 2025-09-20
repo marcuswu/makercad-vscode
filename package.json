@@ -1,0 +1,63 @@
+{
+  "name": "makercad-vscode",
+  "displayName": "MakerCAD",
+  "description": "VSCode extension for MakerCAD",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.103.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "go",
+        "path": "./src/snippets/snippets.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "makercad-vscode.preview",
+        "title": "MakerCAD: preview object"
+      }
+    ],
+    "configuration": {
+      "title": "MakerCAD extension",
+      "type": "object",
+      "properties": {
+        "makercadExtension.modelViewDist": {
+          "type": "number",
+          "default": 50,
+          "description": "Camera view distance from the model"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "esbuild src/extension.ts src/media/main.ts --bundle --outdir=out --external:vscode --sourcemap --platform=node && cp -rf src/media/*.css out/media/",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@types/vscode": "^1.103.0",
+    "@typescript-eslint/eslint-plugin": "^8.39.0",
+    "@typescript-eslint/parser": "^8.39.0",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2",
+    "eslint": "^9.32.0",
+    "esbuild": "^0.25.10",
+    "typescript": "^5.9.2",
+    "@types/three": "^0.179.0",
+    "three": "^0.179.1"
+  },
+  "extensionDependencies": [
+    "golang.go"
+  ]
+}
