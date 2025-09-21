@@ -3,11 +3,29 @@
   "displayName": "MakerCAD",
   "description": "VSCode extension for MakerCAD",
   "version": "0.0.1",
+  "author": {
+    "name": "Marcus Wu"
+  },
+  "license": "MIT",
   "engines": {
     "vscode": "^1.103.0"
   },
   "categories": [
+    "Visualization",
     "Other"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcuswu/makercad-vscode"
+  },
+  "bugs":{
+    "url": "https://github.com/marcuswu/makercad-vscode/issues"
+  },
+  "keywords": [
+    "golang",
+    "makercad",
+    "cad"
   ],
   "activationEvents": [],
   "main": "./out/extension.js",
