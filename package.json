@@ -3,6 +3,7 @@
   "displayName": "MakerCAD",
   "description": "VSCode extension for MakerCAD",
   "version": "0.0.1",
+  "publisher": "MarcusWu",
   "author": {
     "name": "Marcus Wu"
   },
